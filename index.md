@@ -62,6 +62,8 @@ features:
 - **Codex CLI** - OpenAI GPT-5ベースのローカル実行ツール、Rustで高速動作・コード編集を自動化
 - **Gemini CLI** - Googleのオープンソースツール、100万トークン対応・無料枠1日1000リクエスト
 
+📌 **[詳しいセットアップ手順はこちら](/docs/environment/setup-guide)** - Node.js、Git、各AIツールの最新インストールガイド（2025年9月版）
+
 ### Step 2: 作りたいものを説明する
 例えばこんな風に：
 ```

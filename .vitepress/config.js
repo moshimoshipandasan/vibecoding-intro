@@ -15,6 +15,7 @@ export default defineConfig({
     // ナビゲーションバー
     nav: [
       { text: 'ホーム', link: '/' },
+      { text: '環境構築', link: '/docs/environment/setup-guide' },
       { text: '始める', link: '/docs/beginner/chapter01' },
       {
         text: '学習ガイド',
@@ -48,6 +49,14 @@ export default defineConfig({
         items: [
           { text: '🏠 ホーム', link: '/' },
           { text: '🌈 Vibe Codingとは', link: '/#what-is-vibe-coding' }
+        ]
+      },
+      {
+        text: '⚙️ 環境構築',
+        collapsible: true,
+        collapsed: false,
+        items: [
+          { text: 'AI開発環境セットアップガイド 2025', link: '/docs/environment/setup-guide' }
         ]
       },
       {
