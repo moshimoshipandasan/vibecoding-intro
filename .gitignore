@@ -1,0 +1,32 @@
+# 依存関係
+node_modules/
+
+# ビルド出力
+.vitepress/dist/
+.vitepress/cache/
+dist/
+
+# ログファイル
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# エディタ設定
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 環境変数
+.env
+.env.local
+.env.*.local
+
+# テンポラリファイル
+*.log
+*.tmp
+temp/
+tmp/
