@@ -4,9 +4,7 @@ layout: home
 hero:
   name: "はじめてのVibe Coding"
   text: "AIと対話して作る新しいプログラミング"
-  tagline: |
-    「英語が新しいプログラミング言語になる」
-    コードを書かずに、アイデアを形に
+  tagline: 「英語が新しいプログラミング言語になる」コードを書かずに、アイデアを形に
   image:
     src: https://api.iconify.design/carbon:ai-launch.svg?color=%236b46c1
     alt: Vibe Coding
