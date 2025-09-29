@@ -25,7 +25,7 @@ npm install
 npm run dev
 ```
 
-ブラウザで http://localhost:5173 を開いてサイトを確認できます。
+ブラウザで http://localhost:5175 を開いてサイトを確認できます。
 
 ### 3. 本番用ビルド
 

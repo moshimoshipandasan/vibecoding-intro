@@ -8,6 +8,9 @@ export default defineConfig({
   // GitHub Pagesの設定
   base: '/vibecoding-intro/',
 
+  // ローカルホストリンクを無視
+  ignoreDeadLinks: 'localhostLinks',
+
   themeConfig: {
     // ナビゲーションバー
     nav: [
