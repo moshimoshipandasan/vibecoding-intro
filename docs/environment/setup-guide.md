@@ -413,4 +413,4 @@ gemini auth login
 
 *最終更新: 2025年9月29日*
 
-[← ホームに戻る](/) | [次へ: 初めてのAIプログラミング →](/docs/beginner/chapter01)
+[← ホームに戻る](/) | [次へ: cc-sdd仕様駆動開発 →](/docs/cc-sdd/introduction)
