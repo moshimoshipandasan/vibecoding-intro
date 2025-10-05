@@ -17,6 +17,7 @@ export default defineConfig({
       { text: 'ホーム', link: '/' },
       { text: '環境構築', link: '/docs/environment/setup-guide' },
       { text: 'cc-sdd 仕様駆動開発', link: '/docs/cc-sdd/introduction' },
+      { text: 'Spec Driven Codex ガイド', link: '/docs/spec-driven-codex/' },
       { text: 'GitHub', link: 'https://github.com' }
     ],
 
@@ -49,6 +50,15 @@ export default defineConfig({
           { text: 'ワークフローの詳細', link: '/docs/cc-sdd/workflow' },
           { text: 'コマンドリファレンス', link: '/docs/cc-sdd/commands' },
           { text: 'ベストプラクティス', link: '/docs/cc-sdd/best-practices' }
+        ]
+      },
+      {
+        text: '🧭 Spec Driven Codex',
+        collapsible: true,
+        collapsed: false,
+        items: [
+          { text: '概要', link: '/docs/spec-driven-codex/' },
+          { text: '実践ガイド', link: '/docs/spec-driven-codex/practical-guide' }
         ]
       },
       {
@@ -90,3 +100,6 @@ export default defineConfig({
     darkModeSwitchLabel: 'ダークモード'
   }
 })
+
+
+

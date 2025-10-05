@@ -24,6 +24,11 @@ features:
     details: "6 フェーズで品質とスピードを両立する開発プロセス。"
     link: /docs/cc-sdd/workflow
     linkText: ワークフローを確認 →
+  - icon: 🧭
+    title: Spec Driven Codex 実践
+    details: "Codex CLI専用SDDテンプレートで要件定義から実装までを自動化。"
+    link: /docs/spec-driven-codex/practical-guide
+    linkText: 実践ガイドへ →
   - icon: 🌈
     title: Vibe Coding の実践
     details: "自然言語での対話を活かしたクリエイティブ開発のベストプラクティス。"
@@ -38,5 +43,10 @@ features:
 - [AI開発環境セットアップガイド](/docs/environment/setup-guide)
 - [GitHub CodespacesでCodexを起動する手順](/docs/github-codespaces-codex/setup-guide)
 - [cc-sddとは](/docs/cc-sdd/introduction)
+- [Spec Driven Codex 概要](/docs/spec-driven-codex/)
+- [Spec Driven Codex 実践ガイド](/docs/spec-driven-codex/practical-guide)
 
 より詳細な情報はサイドバーの各セクションからアクセスできます。
+
+
+
