@@ -50,6 +50,14 @@ export default defineConfig({
           { text: 'コマンドリファレンス', link: '/docs/cc-sdd/commands' },
           { text: 'ベストプラクティス', link: '/docs/cc-sdd/best-practices' }
         ]
+      },
+      {
+        text: '🧠 Codex 開発環境',
+        collapsible: true,
+        collapsed: false,
+        items: [
+          { text: 'GitHub CodespacesでCodexを起動', link: '/docs/github-codespaces-codex/setup-guide' }
+        ]
       }
     ],
 
