@@ -1,28 +1,32 @@
 # Repository Guidelines
 
-## プロジェクト構成とモジュール配置
-- `.vitepress/config.js` がサイトのタイトル、ナビゲーション、テーマ設定のハブです。構造変更が必要な場合はここを更新します。
-- Markdown コンテンツはリポジトリ直下の `index.md` と、ガイドをまとめた `docs/` 配下（例: `docs/cc-sdd/*.md`、`docs/environment/setup-guide.md`）にあります。
-- 配信とデプロイは `.github/workflows/deploy.yml` で管理されます。ブランチや Secrets を変更する際はこのワークフローを調整してください。
+This repository hosts the VitePress site "はじめてのVibe Coding". Follow the guidance below to keep documentation consistent, buildable, and ready for GitHub Pages deployment.
 
-## ビルド・テスト・開発コマンド
-- `npm install` で VitePress を含む依存関係をインストールします。
-- `npm run dev` はホットリロード付き開発サーバーを `http://localhost:5175/` で起動します。
-- `npm run build` は `.vitepress/dist/` に静的ファイルを出力し、GitHub Pages 配信用アーティファクトを作成します。
-- `npm run preview` はビルド済み成果物をローカルで配信し、本番前の最終チェックに利用します。
+## Project Structure & Module Organization
+- `.vitepress/config.js`: single source for site title, navigation, sidebar, search, and footer. Preserve the existing 2-space indentation and keep navigation labels in Japanese when updating.
+- `index.md`: landing page. Use it for the top-level overview and cross-links into the guides.
+- `docs/cc-sdd/`, `docs/environment/`, `docs/github-codespaces-codex/`: topic-specific guides. Create new pages in kebab-case (e.g., `ai-overview.md`) and register them in the sidebar.
+- `.github/workflows/deploy.yml`: GitHub Pages pipeline. Adjust its branch or secret references whenever deployment settings change.
 
-## コーディングスタイルと命名規則
-- Markdown ファイル名は `ai-overview.md` のように意味の分かるケバブケースで統一します。
-- Markdown 本文ではページタイトルに `#`、節に `##`、小節に `###` を用い、見出し階層を明確に保ちます。
-- `config.js` 編集時は既存の 2 スペースインデントを守り、UI の一貫性確保のためナビゲーション文言は日本語で記述します。
+## Build, Test, and Development Commands
+- `npm install`: install VitePress and supporting tooling.
+- `npm run dev`: launch the hot-reload dev server at `http://localhost:5175/`. Review both light and dark themes after UI edits.
+- `npm run build`: generate static assets in `.vitepress/dist/` and surface broken links or config errors.
+- `npm run preview`: serve the production build locally for a final smoke test.
 
-## テスト方針
-- 自動テストは未整備です。大きな更新前に `npm run build` を実行してリンク切れやビルドエラーを検出してください。
-- レイアウトやテーマを変更した際は `npm run dev` でライト／ダークモード双方を目視確認します。
-- 手動検証で得たチェックポイントはプルリクエストの説明に記録し、レビュアーが追試できるようにします。
+## Coding Style & Naming Conventions
+- Markdown: start pages with a single `#` title, use descending `##`/`###` hierarchy, and keep sections concise.
+- File names: kebab-case in English for consistency (e.g., `agent-workflow.md`).
+- JavaScript config: respect existing 2-space indentation, trailing commas, and comment style. Keep emoji-prefixed labels aligned with the current tone.
 
-## コミットとプルリクエストのガイドライン
-- 履歴と同様に Conventional Commits（`feat: ...`、`fix: ...`、`refactor: ...` など）を使用します。
-- 1 コミット 1 変更を心掛け、必要に応じて本文へ関連セクションや背景を補足してください。
-- プルリクエストでは変更概要、手動確認内容、関連 Issue を記載します。
-- ナビゲーションやレイアウトを更新した場合はスクリーンショットや GIF を添付し、レビュアーの確認コストを下げます。
+## Testing Guidelines
+- No automated test suite exists. Run `npm run build` before each PR to catch structural regressions.
+- After layout or theme changes, verify the dev server manually on desktop and mobile viewports, toggling dark mode. Capture any issues for the PR description.
+
+## Commit & Pull Request Guidelines
+- Use Conventional Commits (`feat:`, `fix:`, `docs:`, etc.). Limit each commit to one logical change and explain the intent in the message body when needed.
+- PRs should summarize the scope, list manual verification steps (build, preview, screenshots for navigation or layout tweaks), and link relevant issues.
+
+## Security & Configuration Tips
+- When modifying deployment, confirm the `base` path in `.vitepress/config.js` and GitHub Pages settings stay in sync.
+- Never commit secrets; store credentials as GitHub Actions secrets referenced in `.github/workflows/deploy.yml`.
