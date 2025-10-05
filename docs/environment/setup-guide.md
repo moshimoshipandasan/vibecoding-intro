@@ -45,6 +45,28 @@
 
 ### Windows
 
+#### PowerShell のスクリプト実行ポリシー設定
+
+初期状態の PowerShell ではスクリプト実行が制限されており、カスタムコマンドを実行しようとすると下図のような警告が表示されます。
+
+![PowerShell の実行ポリシー警告](./assets/image.png)
+
+**対処手順**
+
+1. PowerShell を「管理者として実行」で開きます。
+    ![PowerShell を管理者として実行する手順](./assets/image_menu.png)
+2. 現在のポリシーを確認します。
+   ```powershell
+   Get-ExecutionPolicy
+   ```
+3. 開発用途に必要なスクリプトのみ許可するため、現在のユーザーに限定して `RemoteSigned` を設定します。
+   ```powershell
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+   ```
+4. `Y` を入力して確定し、再度 `Get-ExecutionPolicy` で変更を確認します。
+
+> **注意**: `Unrestricted` や `Bypass` には変更せず、不要になった場合は `Set-ExecutionPolicy -Scope CurrentUser Restricted` で元に戻してください。
+
 #### Node.js のインストール
 
 **方法1: 公式インストーラー**
@@ -414,3 +436,9 @@ gemini auth login
 *最終更新: 2025年9月29日*
 
 [← ホームに戻る](/) | [次へ: cc-sdd仕様駆動開発 →](/docs/cc-sdd/introduction)
+
+
+
+
+
+
