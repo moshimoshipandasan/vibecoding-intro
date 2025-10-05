@@ -3,431 +3,379 @@ layout: home
 
 hero:
   name: "はじめてのVibe Coding"
-  text: "AIと対話して作る次世代プログラミング"
-  tagline: 「英語が新しいプログラミング言語になる」- Andrej Karpathy
+  text: "AIと協働する次世代ドキュメントポータル"
+  tagline: AI支援開発の全工程を 1 つのナレッジベースでキャッチアップ
   actions:
     - theme: brand
-      text: 🚀 環境構築を始める
+      text: 🚀 環境構築から始める
       link: /docs/environment/setup-guide
     - theme: alt
-      text: 💡 cc-sddを学ぶ
+      text: 🧠 CodexをCodespacesで起動
+      link: /docs/github-codespaces-codex/setup-guide
+    - theme: alt
+      text: 📚 cc-sddワークフローを学ぶ
       link: /docs/cc-sdd/introduction
 
 features:
-  - icon: 🤖
-    title: AI開発環境
-    details: Claude Code、Codex CLI、Gemini CLIを使った最新のAI支援開発環境。2025年9月最新版の完全ガイド。
+  - icon: ⚙️
+    title: AI開発環境テンプレート
+    details: Node.js・AI CLI・GitHub Actionsを一括セットアップする手順。
     link: /docs/environment/setup-guide
     linkText: セットアップガイド →
-
-  - icon: 🎯
+  - icon: 🧠
+    title: Codex × Codespaces
+    details: OAuth 認証まで含めた Codex CLI の起動マニュアル。
+    link: /docs/github-codespaces-codex/setup-guide
+    linkText: 手順を見る →
+  - icon: 📐
     title: 仕様駆動開発 cc-sdd
-    details: AWS Kiro互換の仕様駆動開発フレームワーク。4週間のスプリントを3時間のBoltサイクルに短縮。
-    link: /docs/cc-sdd/introduction
-    linkText: cc-sddを始める →
-
-  - icon: 🌟
-    title: Vibe Coding
-    details: コード不要でアイデアを形に。自然言語でAIと対話しながら、複雑なアプリケーションを構築。
-    link: #what-is-vibe-coding
+    details: 6 フェーズで品質とスピードを両立する開発プロセス。
+    link: /docs/cc-sdd/workflow
+    linkText: ワークフローを確認 →
+  - icon: 🌈
+    title: Vibe Coding の実践
+    details: 自然言語での対話を活かしたクリエイティブ開発のベストプラクティス。
+    link: #about-vibe-coding
     linkText: Vibe Codingとは →
 ---
 
 <style>
-.VPFeature {
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.VPFeature:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-}
-.VPHero .tagline {
-  font-style: italic;
-  opacity: 0.9;
-}
-</style>
-
-## 🌈 Vibe Codingとは？ {#what-is-vibe-coding}
-
-**Vibe Coding（バイブコーディング）** は、2025年にOpenAIの共同創業者であるAndrej Karpathy氏が提唱した、**AIと自然言語で対話しながらソフトウェアを作る革新的な開発手法**です。
-
-> 「最もホットな新しいプログラミング言語は英語だ」
-> — Andrej Karpathy
-
-### 💡 なぜVibe Codingなのか？
-
-<div class="feature-grid">
-
-| 従来のプログラミング | Vibe Coding |
-|:---:|:---:|
-| 🔤 構文を覚える必要がある | 💬 自然言語で指示 |
-| 🐛 デバッグに時間がかかる | ⚡ AIが自動修正 |
-| 📚 学習に数ヶ月〜数年 | 🚀 今日から始められる |
-| 🔧 コードの詳細を理解必須 | 💡 アイデアに集中できる |
-
-</div>
-
----
-
-## 🛠️ 3つのAI開発ツール {#ai-tools}
-
-<div class="tools-comparison">
-
-### 🤖 Claude Code
-**Anthropic / Opus 4.1搭載**
-- 1Mトークンコンテキスト（近日実装）
-- TDD・リファクタリング特化
-- $20-200/月（Claude Max）
-
-### 🔮 Codex CLI
-**OpenAI / GPT-5-Codex**
-- エンタープライズ対応
-- IDE統合・セッション管理
-- $1.25/$10 per Mトークン
-
-### 💎 Gemini CLI
-**Google / Gemini 2.5 Pro**
-- 100万トークンコンテキスト
-- 無料枠：1,000リクエスト/日
-- Google検索統合
-
-</div>
-
-📌 **[詳しいセットアップ手順はこちら](/docs/environment/setup-guide)** - Node.js、Git、各AIツールの完全インストールガイド
-
----
-
-## 🚀 はじめ方：2つのアプローチ {#getting-started}
-
-<div class="approach-cards">
-
-### 📝 仕様駆動開発（cc-sdd）
-**体系的・品質重視のアプローチ**
-
-1. **Steering** - プロジェクトの方向性を定義
-2. **Init** - 基盤とアーキテクチャ設計
-3. **Requirements** - 詳細な要件定義
-4. **Design** - 技術設計とモックアップ
-5. **Tasks** - タスク分解と計画
-6. **Implementation** - 段階的な実装
-
-👉 [cc-sddワークフローを学ぶ](/docs/cc-sdd/workflow)
-
-### 💬 対話型開発（Vibe Coding）
-**アジャイル・探索的アプローチ**
-
-1. **AIツールを起動**
-   ```bash
-   claude  # または codex, gemini
-   ```
-
-2. **自然言語で指示**
-   ```
-   「ToDoアプリを作って。タスクの追加・削除・
-   完了チェック機能付きで、パステルカラーのデザインで」
-   ```
-
-3. **対話で改善**
-   ```
-   「ボタンをもっと大きく」
-   「ダークモードを追加」
-   ```
-
-</div>
-
----
-
-## 📊 開発スタイル比較 {#comparison}
-
-<table class="comparison-table">
-<thead>
-<tr>
-<th>項目</th>
-<th>🎯 Vibe Coding</th>
-<th>📝 cc-sdd</th>
-<th>🔨 従来の開発</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>開発速度</strong></td>
-<td>⚡ 超高速</td>
-<td>🚀 高速</td>
-<td>🐢 通常</td>
-</tr>
-<tr>
-<td><strong>品質保証</strong></td>
-<td>🔄 対話的</td>
-<td>✅ 体系的</td>
-<td>📋 手動</td>
-</tr>
-<tr>
-<td><strong>学習曲線</strong></td>
-<td>📈 緩やか</td>
-<td>📊 中程度</td>
-<td>📉 急</td>
-</tr>
-<tr>
-<td><strong>適用規模</strong></td>
-<td>個人・小規模</td>
-<td>チーム・大規模</td>
-<td>全規模</td>
-</tr>
-<tr>
-<td><strong>コスト</strong></td>
-<td>💰 低〜中</td>
-<td>💵 中〜高</td>
-<td>💸 高</td>
-</tr>
-</tbody>
-</table>
-
----
-
-## 🎯 プロジェクトタイプ別推奨 {#recommendations}
-
-<div class="recommendation-cards">
-
-### 🎨 個人プロジェクト
-**Vibe Coding + Gemini CLI**
-- 無料枠で十分
-- 高速プロトタイピング
-- 創造的な自由度
-
-### 🏢 スタートアップ
-**cc-sdd + Claude Code**
-- 品質とスピードのバランス
-- Claude Maxプラン
-- TDD対応
-
-### 🏭 エンタープライズ
-**cc-sdd + 全ツール導入**
-- 完全な品質管理
-- API統合
-- チーム開発対応
-
-</div>
-
----
-
-## 📚 学習リソース {#resources}
-
-<div class="resource-links">
-
-### 🔧 環境構築
-- [AI開発環境セットアップガイド](/docs/environment/setup-guide)
-- Node.js、Git、AI CLIツールの完全ガイド
-
-### 🚀 cc-sdd ドキュメント
-- [cc-sddとは](/docs/cc-sdd/introduction)
-- [はじめ方ガイド](/docs/cc-sdd/getting-started)
-- [ワークフロー詳細](/docs/cc-sdd/workflow)
-- [コマンドリファレンス](/docs/cc-sdd/commands)
-- [ベストプラクティス](/docs/cc-sdd/best-practices)
-
-### 🌐 外部リソース
-- [Claude Code Docs](https://docs.claude.com/en/docs/claude-code/)
-- [OpenAI Codex](https://github.com/openai/codex)
-- [Google Gemini CLI](https://github.com/google-gemini/gemini-cli)
-
-</div>
-
----
-
-## 🌟 次のステップ {#next-steps}
-
-<div class="cta-section">
-
-### 今すぐ始める準備はできましたか？
-
-1. **[環境構築ガイド](/docs/environment/setup-guide)** でAIツールをインストール
-2. **[cc-sdd入門](/docs/cc-sdd/introduction)** で体系的な開発手法を学ぶ
-3. **実際にプロジェクトを作成** して、AIと協働開発を体験
-
-<div class="cta-buttons">
-  <a href="/docs/environment/setup-guide" class="cta-primary">🚀 環境構築を始める</a>
-  <a href="/docs/cc-sdd/introduction" class="cta-secondary">📚 cc-sddを学ぶ</a>
-</div>
-
-</div>
-
----
-
-<style>
-.feature-grid {
-  margin: 2rem 0;
+:root {
+  --home-grid-gap: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-.feature-grid table {
-  width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.tools-comparison {
+.section-intro {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
 }
 
-.tools-comparison h3 {
-  margin-top: 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--vp-c-brand);
+.section-intro p {
+  max-width: 48rem;
+  color: var(--vp-c-text-2);
 }
 
-.approach-cards {
+.card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
+  gap: var(--home-grid-gap);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-bottom: 3.5rem;
 }
 
-.approach-cards > div {
-  padding: 1.5rem;
-  border-radius: 12px;
+.card-grid .card {
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-border);
-}
-
-.comparison-table {
-  width: 100%;
-  margin: 3rem 0;
-  border-collapse: collapse;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.comparison-table th {
-  background: var(--vp-c-brand);
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
-.comparison-table td {
-  padding: 1rem;
-  text-align: center;
-  border: 1px solid var(--vp-c-border);
-}
-
-.comparison-table tbody tr:nth-child(even) {
-  background: var(--vp-c-bg-soft);
-}
-
-.recommendation-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
-}
-
-.recommendation-cards > div {
+  border-radius: 14px;
   padding: 1.5rem;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--vp-c-bg-soft), var(--vp-c-bg));
-  border: 1px solid var(--vp-c-brand);
-  transition: transform 0.3s ease;
+  display: grid;
+  gap: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.recommendation-cards > div:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+.card-grid .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 
-.resource-links {
-  margin: 3rem 0;
+.card-grid .card h3 {
+  margin: 0;
+  font-size: 1.1rem;
 }
 
-.resource-links h3 {
-  color: var(--vp-c-brand);
-  margin-top: 2rem;
+.card-grid .card p {
+  margin: 0;
+  color: var(--vp-c-text-2);
 }
 
-.resource-links ul {
-  list-style: none;
-  padding-left: 1rem;
-}
-
-.resource-links li {
-  margin: 0.5rem 0;
-}
-
-.resource-links a {
+.card-grid .card a {
+  align-self: flex-start;
+  font-weight: 600;
   color: var(--vp-c-brand);
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-.resource-links a:hover {
-  color: var(--vp-c-brand-dark);
+.card-grid .card a:hover {
   text-decoration: underline;
 }
 
-.cta-section {
-  background: linear-gradient(135deg, var(--vp-c-brand-soft), var(--vp-c-bg-soft));
-  padding: 3rem;
-  border-radius: 16px;
+.timeline {
+  display: grid;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.timeline-step {
+  background: linear-gradient(135deg, var(--vp-c-bg), var(--vp-c-bg-soft));
+  border: 1px solid var(--vp-c-border);
+  border-left: 4px solid var(--vp-c-brand);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.timeline-step h3 {
+  margin: 0;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 3rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.09);
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 1rem;
   text-align: center;
-  margin: 4rem 0;
+}
+
+.compare-table th {
+  background: var(--vp-c-brand);
+  color: #fff;
+}
+
+.compare-table tbody tr:nth-child(even) td {
+  background: var(--vp-c-bg-soft);
+}
+
+.list-clean {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.list-clean li {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-clean a {
+  font-weight: 600;
+  color: var(--vp-c-brand);
+  text-decoration: none;
+}
+
+.list-clean a:hover {
+  text-decoration: underline;
+}
+
+.cta-panel {
+  background: linear-gradient(135deg, var(--vp-c-brand-soft), var(--vp-c-bg));
+  border-radius: 18px;
+  padding: clamp(2rem, 4vw, 3rem);
+  margin: 4rem 0 2rem;
+  text-align: center;
+  box-shadow: 0 20px 48px rgba(0,0,0,0.12);
+}
+
+.cta-panel h2 {
+  margin-bottom: 0.75rem;
 }
 
 .cta-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
   margin-top: 2rem;
 }
 
-.cta-primary, .cta-secondary {
-  padding: 0.8rem 2rem;
-  border-radius: 8px;
-  text-decoration: none;
+.cta-buttons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
   font-weight: 600;
+  text-decoration: none;
   transition: all 0.3s ease;
-  display: inline-block;
 }
 
 .cta-primary {
   background: var(--vp-c-brand);
-  color: white;
+  color: #fff;
 }
 
 .cta-primary:hover {
   background: var(--vp-c-brand-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
 }
 
 .cta-secondary {
-  background: white;
+  background: #fff;
   color: var(--vp-c-brand);
   border: 2px solid var(--vp-c-brand);
 }
 
 .cta-secondary:hover {
   background: var(--vp-c-brand-soft);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
-@media (max-width: 768px) {
-  .tools-comparison,
-  .approach-cards,
-  .recommendation-cards {
+@media (max-width: 720px) {
+  .hero .actions {
     grid-template-columns: 1fr;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .comparison-table {
-    font-size: 0.9rem;
   }
 }
 </style>
+
+## 📌 まずはここから
+
+<div class="section-intro">
+  <p>Vibe Coding のための環境構築から CLI 認証、仕様策定までを段階的にキャッチアップできるよう、優先度の高いドキュメントをまとめました。</p>
+</div>
+
+<div class="card-grid">
+  <div class="card">
+    <h3>AI開発環境セットアップ</h3>
+    <p>Node.js、CLI ツール、GitHub Actions の初期設定を網羅。ローカルでも Codespaces でも使える標準構成。</p>
+    <a href="/docs/environment/setup-guide">環境構築ガイドを読む →</a>
+  </div>
+  <div class="card">
+    <h3>Codex CLI を Codespaces で起動</h3>
+    <p>`npm install -g @openai/codex` から OAuth 認証 URL の変換まで、エラーを避けるチェックポイント付き。</p>
+    <a href="/docs/github-codespaces-codex/setup-guide">Codex 手順を確認 →</a>
+  </div>
+  <div class="card">
+    <h3>cc-sdd 仕様駆動開発</h3>
+    <p>6 つのフェーズで進める開発フレームワーク。要求分析から実装までの判断基準を整理。</p>
+    <a href="/docs/cc-sdd/introduction">cc-sddを学ぶ →</a>
+  </div>
+</div>
+
+## 🚀 クイックスタート
+
+<div class="timeline">
+  <div class="timeline-step">
+    <h3>Step 1: 環境を整える</h3>
+    <p>`npm install` で依存関係を導入し、`npm run dev` で VitePress サイトを起動。Codespaces では標準で Node.js がインストール済みです。</p>
+  </div>
+  <div class="timeline-step">
+    <h3>Step 2: Codex CLI を認証する</h3>
+    <p>`codex --yolo` 実行後に生成される OAuth URL を <strong>Codex Redirect URL ジェネレーター</strong> で変換し、ターミナルへ貼り付けて認証を完了します。</p>
+  </div>
+  <div class="timeline-step">
+    <h3>Step 3: ドキュメントを編集する</h3>
+    <p>`/docs` または ルートの Markdown を更新。ナビゲーションは `.vitepress/config.js` の `nav` / `sidebar` で管理します。</p>
+  </div>
+</div>
+
+## 🌈 Vibe Codingとは {#about-vibe-coding}
+
+Vibe Coding は、自然言語の指示と AI アシスタントを組み合わせてアイデアを高速に形にする開発スタイルです。コードを書く代わりに、仕様や改善点を対話で伝え、AI が実装・検証・改善を繰り返します。
+
+> 「最もホットな新しいプログラミング言語は英語だ」 — Andrej Karpathy
+
+- 🧭 **フォーカス**: 要件と UX に集中し、細かな実装は AI に移譲
+- 🔁 **サイクル**: 指示 → 生成 → レビュー → 微調整の短いループ
+- 🤝 **コラボレーション**: CLI やエディタ統合を通じて AI と共同編集
+
+## 🛠 ツールカタログ
+
+<div class="card-grid">
+  <div class="card">
+    <h3>🤖 Claude Code</h3>
+    <p>長文コンテキストと TDD 支援が強み。リファクタリングや仕様レビューに最適です。</p>
+    <a href="https://docs.claude.com/en/docs/claude-code/" target="_blank" rel="noopener">公式ドキュメント →</a>
+  </div>
+  <div class="card">
+    <h3>🧠 Codex CLI</h3>
+    <p>OpenAI の GPT-5-Codex ベース。Codespaces と組み合わせることでブラウザだけで完結。</p>
+    <a href="/docs/github-codespaces-codex/setup-guide">セットアップを見る →</a>
+  </div>
+  <div class="card">
+    <h3>💎 Gemini CLI</h3>
+    <p>Google のマルチモーダルモデル。検索連携でリサーチと実装を同時進行できます。</p>
+    <a href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener">GitHub →</a>
+  </div>
+</div>
+
+## 📚 ドキュメントディレクトリ
+
+<ul class="list-clean">
+  <li>
+    <a href="/docs/environment/setup-guide">環境構築セットアップガイド</a>
+    <span>ローカル・Codespaces 共通の初期設定とツール導入手順。</span>
+  </li>
+  <li>
+    <a href="/docs/github-codespaces-codex/setup-guide">GitHub CodespacesでCodexを起動する手順</a>
+    <span>Codex CLI のインストールから OAuth 認証 URL 変換までを図解。</span>
+  </li>
+  <li>
+    <a href="/docs/cc-sdd/introduction">cc-sddとは</a>
+    <span>仕様駆動開発の概要と導入メリット。</span>
+  </li>
+  <li>
+    <a href="/docs/cc-sdd/getting-started">cc-sdd はじめ方ガイド</a>
+    <span>実際のプロジェクトで使うためのステップバイステップ解説。</span>
+  </li>
+  <li>
+    <a href="/docs/cc-sdd/workflow">cc-sdd ワークフローの詳細</a>
+    <span>各フェーズの入力・アウトプットとチェックリスト。</span>
+  </li>
+  <li>
+    <a href="/docs/cc-sdd/commands">cc-sdd コマンドリファレンス</a>
+    <span>CLI 操作用コマンドやテンプレート集。</span>
+  </li>
+  <li>
+    <a href="/docs/cc-sdd/best-practices">cc-sdd ベストプラクティス</a>
+    <span>チーム導入時の失敗例と回避策。</span>
+  </li>
+</ul>
+
+## 🎯 スタイル比較
+
+<table class="compare-table">
+  <thead>
+    <tr>
+      <th>項目</th>
+      <th>Vibe Coding</th>
+      <th>cc-sdd</th>
+      <th>従来型</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>開発速度</td>
+      <td>⚡ アイデア検証に最適</td>
+      <td>🚀 リリースまで一貫</td>
+      <td>🐢 ドキュメント依存</td>
+    </tr>
+    <tr>
+      <td>品質管理</td>
+      <td>🔄 対話的レビュー</td>
+      <td>✅ チェックリスト駆動</td>
+      <td>📋 手動テスト中心</td>
+    </tr>
+    <tr>
+      <td>チーム規模</td>
+      <td>1〜3名</td>
+      <td>4〜20名</td>
+      <td>全規模</td>
+    </tr>
+    <tr>
+      <td>導入コスト</td>
+      <td>💰 低</td>
+      <td>💵 中</td>
+      <td>💸 中〜高</td>
+    </tr>
+  </tbody>
+</table>
+
+## ✅ 次のアクション
+
+<div class="cta-panel">
+  <h2>今日から Vibe Coding を体験しましょう</h2>
+  <p>環境を整え、Codex で AI セッションを開始し、cc-sdd で仕様管理を強化する 3 ステップで、アイデアをすぐに形にできます。</p>
+  <div class="cta-buttons">
+    <a class="cta-primary" href="/docs/environment/setup-guide">🚀 セットアップを完了する</a>
+    <a class="cta-secondary" href="/docs/github-codespaces-codex/setup-guide">🧠 Codex 認証を実行する</a>
+    <a class="cta-secondary" href="/docs/cc-sdd/workflow">📐 ワークフローを確認する</a>
+  </div>
+</div>
